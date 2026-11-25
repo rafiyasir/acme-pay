@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import type { DatabaseHealth } from '../application/ports/database-health.js';
 import { errorHandler } from './middleware/error-handler.js';
@@ -8,8 +9,11 @@ export interface AppDependencies {
   webOrigin: string;
 }
 
-export function createApp({ databaseHealth }: AppDependencies) {
+export function createApp({ databaseHealth, webOrigin }: AppDependencies) {
   const app = express();
+
+  // One origin only, never a wildcard.
+  app.use(cors({ origin: [webOrigin] }));
 
   app.get('/api/health', async (_req, res) => {
     const dbIsUp = await databaseHealth.isUp();
