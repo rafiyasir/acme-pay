@@ -2,7 +2,13 @@ import { z } from 'zod';
 
 const configSchema = z.object({
   DATABASE_URL: z.url(),
-  WEB_ORIGIN: z.url(),
+  // Browsers send the origin without a path, so a trailing slash would never match in CORS.
+  WEB_ORIGIN: z
+    .url()
+    .refine(
+      (value) => new URL(value).origin === value,
+      'must be an origin like https://app.example.com, with no path or trailing slash',
+    ),
   PORT: z.coerce.number().int().min(1).max(65535).default(3000),
 });
 
