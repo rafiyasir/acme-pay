@@ -45,6 +45,13 @@ Out: any employee feature, any web code and the Vercel deploy (spec 08).
 - Root scripts: `dev`, `build`, `start`, `test`, `test:integration`, `lint`, `migrate`.
 - Pin the Node and pnpm versions (`packageManager` field, `.nvmrc`).
 - Render free web services sleep after 15 minutes idle and take about a minute to wake. Note the cold start in the README.
+- Environment files, all in `api/` and gitignored except the example:
+  - `.env.development`: `DATABASE_URL` (Neon `dev` branch), `WEB_ORIGIN`, `PORT`. Loaded by `pnpm dev` and the seed.
+  - `.env.test`: `TEST_DATABASE_URL` (Neon `test` branch) only. Loaded by `pnpm test:integration`, which refuses to run without it.
+  - `.env.example`: every variable name with a placeholder. The only committed one.
+  - Production has no local file: the variables are set in the Render dashboard, so `seed:reset` cannot hit production by accident. Seed production once with a one-off command.
+  - Pick one way to load the files (Node `--env-file` or `dotenv`) and make sure Vitest loads `.env.test` too.
+  - Neon: use the pooled connection string for the running API and the direct one for migrations; both need `sslmode=require`. Run `pnpm migrate` separately for each branch.
 
 ## Manual test
 1. `pnpm dev`, call `GET /api/health`: it returns `{ "status": "ok", "db": "ok" }`.
