@@ -18,5 +18,9 @@ export function createApp({ databaseHealth }: AppDependencies) {
     res.json({ status: 'ok', db: 'ok' });
   });
 
+  app.use((_req, res) => {
+    res.status(404).json({ error: { code: 'NOT_FOUND', message: 'Route not found', details: [] } });
+  });
+
   return app;
 }
