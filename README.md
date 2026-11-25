@@ -45,7 +45,7 @@ Check it works: `GET http://localhost:3000/api/health` returns `{ "status": "ok"
 
 Render builds from the repo root so it finds the pnpm workspace:
 
-- Region: Singapore. Build command: `pnpm install --frozen-lockfile --prod=false && pnpm --filter api build` (`--prod=false` because Render sets `NODE_ENV=production`, which would skip TypeScript). Start command: `pnpm --filter api start`.
+- Region: Singapore. Build command: `pnpm install --frozen-lockfile && pnpm --filter api build`. This builds on Render without `--prod=false` (tested). If a later build says `tsc` is not found, Render skipped dev dependencies: add `--prod=false` to the install. Start command: `pnpm --filter api start`.
 - Build filter: `api/**`, `package.json`, `pnpm-lock.yaml`, `pnpm-workspace.yaml`, so web-only changes do not redeploy the API.
 - `WEB_ORIGIN` is the bare origin, for example `https://acme-pay.vercel.app`, with no trailing slash (the API refuses to start otherwise).
 - Environment variables (set in the dashboard, there is no local production file): `DATABASE_URL` (Neon `main` branch), `WEB_ORIGIN`, `PORT` if Render does not set it.

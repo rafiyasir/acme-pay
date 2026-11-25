@@ -1,6 +1,6 @@
 # Spec 00: API setup and deployed walking skeleton
 
-- Status: approved
+- Status: done
 - Branch: chore/00-setup
 
 ## Goal
@@ -60,7 +60,7 @@ Out: any employee feature, any web code and the Vercel deploy (spec 08).
 3. The deployed URL shows the same.
 
 ## Definition of done
-- [ ] Tests green, lint clean, CI green
+- [x] Tests green, lint clean, CI green
 - [x] Swagger shows health endpoint (covered by a test on /api/docs.json; check the UI in the manual test)
-- [ ] Deployed URL works
+- [x] Deployed URL works
 - [x] README has run instructions

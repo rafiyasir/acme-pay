@@ -29,4 +29,5 @@ reduced to 5, outliers promoted to must-have, backend-first build order).
 - Added one test beyond the red list (OpenAPI lists `/api/health`) so the Swagger checkbox is backed by a test.
 - typescript-eslint did not support TypeScript 7, so TypeScript is pinned to 6.
 - `/review` caught two problems the tests could not: Render sets `NODE_ENV=production`, which would skip TypeScript during the build (fixed with `--prod=false`), and a trailing slash in `WEB_ORIGIN` would silently break CORS (now rejected at startup, with a test). A third finding was that `pnpm migrate` could not run without `.env.development`.
-- Spec 00 stays `approved` until CI is green and the Render deploy is checked, then it is marked `done`.
+- `/review` claimed Render would skip dev dependencies and need `--prod=false`. The first deploy used the flag; a second deploy without it also built, so the claim was wrong for this setup. The README keeps the flag only as a fallback.
+- Spec 00 was marked `done` after CI passed and the Render deploy was checked.
