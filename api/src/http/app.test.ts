@@ -40,3 +40,22 @@ describe('unknown routes', () => {
     });
   });
 });
+
+describe('unexpected errors', () => {
+  it('returns 500 INTERNAL_ERROR without a stack trace', async () => {
+    const crashingDatabase: DatabaseHealth = {
+      isUp: async () => {
+        throw new Error('connection pool exploded');
+      },
+    };
+    const app = createApp({ databaseHealth: crashingDatabase, webOrigin });
+
+    const response = await request(app).get('/api/health');
+
+    expect(response.status).toBe(500);
+    expect(response.body).toEqual({
+      error: { code: 'INTERNAL_ERROR', message: 'Something went wrong', details: [] },
+    });
+    expect(JSON.stringify(response.body)).not.toContain('exploded');
+  });
+});
