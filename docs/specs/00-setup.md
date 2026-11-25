@@ -1,6 +1,6 @@
 # Spec 00: API setup and deployed walking skeleton
 
-- Status: done
+- Status: approved
 - Branch: chore/00-setup
 
 ## Goal
