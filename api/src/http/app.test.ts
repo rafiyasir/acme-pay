@@ -59,3 +59,15 @@ describe('unexpected errors', () => {
     expect(JSON.stringify(response.body)).not.toContain('exploded');
   });
 });
+
+describe('CORS', () => {
+  it('allows the configured web origin and no other', async () => {
+    const app = createApp({ databaseHealth: healthyDatabase, webOrigin });
+
+    const allowed = await request(app).get('/api/health').set('Origin', webOrigin);
+    const other = await request(app).get('/api/health').set('Origin', 'http://evil.example');
+
+    expect(allowed.headers['access-control-allow-origin']).toBe(webOrigin);
+    expect(other.headers['access-control-allow-origin']).toBeUndefined();
+  });
+});
