@@ -11,7 +11,11 @@ export function createApp({ databaseHealth }: AppDependencies) {
 
   app.get('/api/health', async (_req, res) => {
     const dbIsUp = await databaseHealth.isUp();
-    res.json({ status: 'ok', db: dbIsUp ? 'ok' : 'down' });
+    if (!dbIsUp) {
+      res.status(503).json({ status: 'degraded', db: 'down' });
+      return;
+    }
+    res.json({ status: 'ok', db: 'ok' });
   });
 
   return app;
