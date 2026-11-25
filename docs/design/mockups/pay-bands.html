@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pay bands</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#D9E1DD}
+a{color:#2B2B2B}a:hover{color:#000000}
+</style>
+</helmet>
+<div style="min-height: 100vh; box-sizing: border-box; padding: 16px; background: #D9E1DD; font-family: 'Outfit', system-ui, sans-serif; color: #2B2B2B; font-size: 14.5px; font-variant-numeric: tabular-nums">
+<div style="max-width: 1400px; margin: 0 auto; box-sizing: border-box; border-radius: 40px; padding: 22px clamp(14px, 2.4vw, 28px) 28px; background: linear-gradient(115deg, #E9ECEA 0%, #EEF1EE 42%, #E8F5DD 78%, #DCF3C8 100%); display: flex; flex-direction: column; gap: 22px">
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<div style="display: flex; align-items: center; min-height: 52px; padding: 0 22px; border-radius: 999px; border: 1.5px solid #9DA39F; font-size: 26px; font-weight: 300; letter-spacing: -0.01em">acme pay</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+<nav aria-label="Primary" style="display: flex; gap: 4px; padding: 5px; border-radius: 999px; background: rgba(255,255,255,0.72)">
+<a href="Main.dc.html" style="min-height: 42px; display: flex; align-items: center; padding: 0 18px; border-radius: 999px; color: #2B2B2B; text-decoration: none">People</a>
+<a href="Insights.dc.html" aria-current="page" style="min-height: 42px; display: flex; align-items: center; padding: 0 18px; border-radius: 999px; background: #2B2B2B; color: #FFFFFF; text-decoration: none">Pay bands</a>
+</nav>
+<button type="button" style="min-height: 52px; display: flex; align-items: center; gap: 8px; padding: 0 18px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.72); font: inherit; color: #2B2B2B">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>Search <span style="color: #6F7571; font-size: 12.5px">⌘K</span>
+</button>
+<span aria-label="Signed in as HR Manager" style="width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.72); display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2B2B" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1-4 4-6 8-6s7 2 8 6"></path></svg>
+</span>
+</div>
+</header>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 720px">
+<h1 style="margin: 8px 0 0; font-size: clamp(40px, 5vw, 58px); font-weight: 300; letter-spacing: -0.02em; line-height: 1">Pay bands</h1>
+<p style="margin: 0; color: #3F4440; line-height: 1.5">Gross annual salary for every role in every country, in local currency. Each column has its own scale, so compare roles within a country. Pick a tile to see who is behind it.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<button type="button" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.75); font: inherit; color: #2B2B2B">Gross salary ⌄</button>
+<button type="button" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.75); font: inherit; color: #2B2B2B">All departments ⌄</button>
+</div>
+</div>
+
+<section aria-label="Pay band matrix">
+<div style="display: flex; align-items: stretch">
+<div style="flex: 1 1 auto; min-width: 0; background: #F6F8F5; border-radius: 32px 32px 0 0; padding: 20px 22px 14px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center">
+<span style="font-size: 18px; font-weight: 400">8 roles × 6 countries</span>
+<span aria-hidden="true" style="display: flex; align-items: center; gap: 10px; color: #3F4440; font-size: 13.5px">
+<span style="position: relative; display: inline-block; width: 80px; height: 10px; border-radius: 999px; background: #E3E8E4">
+<span style="position: absolute; left: 30%; width: 38%; top: 0; height: 10px; border-radius: 999px; background: #D4F36B"></span>
+<span style="position: absolute; left: 46%; top: -3px; width: 2px; height: 16px; background: #2B2B2B"></span>
+</span>
+Middle 50% of pay · line is median
+</span>
+<span style="display: flex; align-items: center; gap: 6px; color: #3F4440; font-size: 13.5px"><span style="padding: 2px 8px; border-radius: 999px; background: #FFE2B8; color: #6B3800; font-size: 12px; font-weight: 500">3</span>outliers in tile</span>
+</div>
+<div style="position: relative; flex: 0 0 auto; display: flex; align-items: center; gap: 8px; padding: 0 0 16px 18px">
+<div aria-hidden="true" style="position: absolute; left: 0; bottom: 0; width: 32px; height: 32px; background: radial-gradient(circle at 100% 0%, transparent 31.5px, #F6F8F5 32px)"></div>
+<button type="button" aria-label="Filters" style="width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2B2B" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h10"></path><path d="M18 7h2"></path><circle cx="16" cy="7" r="2"></circle><path d="M4 17h2"></path><path d="M10 17h10"></path><circle cx="8" cy="17" r="2"></circle></svg></button>
+<button type="button" style="min-height: 48px; padding: 0 18px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.8); font: inherit; color: #2B2B2B; display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"></path><path d="m8 8 4-4 4 4"></path><path d="M5 13v6h14v-6"></path></svg>Export</button>
+</div>
+</div>
+
+<div style="background: #F6F8F5; border-radius: 0 32px 32px 32px; padding: 0 16px 16px; display: flex; flex-direction: column; gap: 16px">
+<div style="background: #FFFFFF; border-radius: 26px; padding: 14px; overflow-x: auto">
+<div style="min-width: 1080px; display: flex; flex-direction: column; gap: 6px">
+<div style="display: grid; grid-template-columns: minmax(190px, 1.2fr) repeat(6, minmax(0, 1fr)); gap: 6px; border-bottom: 1.5px dotted #C6CBC7; padding-bottom: 8px">
+<div style="padding: 8px 10px; color: #6F7571">Role</div>
+<sc-for list="{{ cols }}" as="c" hint-placeholder-count="6">
+<div style="padding: 8px 10px; display: flex; justify-content: space-between; align-items: baseline; gap: 6px">
+<span>{{ c.name }}</span>
+<span style="font-size: 12.5px; color: #6F7571">{{ c.cur }}</span>
+</div>
+</sc-for>
+</div>
+<sc-for list="{{ matrix }}" as="row" hint-placeholder-count="8">
+<div style="display: grid; grid-template-columns: minmax(190px, 1.2fr) repeat(6, minmax(0, 1fr)); gap: 6px">
+<div style="padding: 10px; display: flex; flex-direction: column; justify-content: center; gap: 2px">
+<span style="font-weight: 500">{{ row.title }}</span>
+<span style="font-size: 12.5px; color: #6F7571">{{ row.dept }}</span>
+</div>
+<sc-for list="{{ row.cells }}" as="cell" hint-placeholder-count="6">
+<button type="button" onClick="{{ cell.pick }}" aria-pressed="{{ cell.selected }}" aria-label="{{ cell.label }}" style="{{ cell.style }}">
+<span style="display: flex; justify-content: space-between; align-items: center; gap: 6px; width: 100%">
+<span style="font-size: 18px; font-weight: 400; letter-spacing: -0.01em">{{ cell.median }}</span>
+<span style="{{ cell.outStyle }}">{{ cell.outText }}</span>
+</span>
+<span aria-hidden="true" style="position: relative; display: block; width: 100%; height: 8px; margin-top: 10px; border-radius: 999px; background: #E9EDEA">
+<span style="{{ cell.box }}"></span>
+<span style="{{ cell.tick }}"></span>
+</span>
+<span style="margin-top: 8px; font-size: 12.5px; color: #6F7571">{{ cell.people }} people</span>
+</button>
+</sc-for>
+</div>
+</sc-for>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: stretch">
+<div style="position: relative; flex: 3 1 560px; min-width: 0; display: flex">
+<section aria-labelledby="drill-h" style="flex: 1; border-radius: 28px; background: #2B2B2B; color: #F3F5F3; padding: 26px; display: flex; flex-direction: column; gap: 22px; -webkit-mask: radial-gradient(circle 36px at calc(100% - 24px) 24px, transparent 35.5px, #000 36px); mask: radial-gradient(circle 36px at calc(100% - 24px) 24px, transparent 35.5px, #000 36px)">
+<div style="display: flex; flex-direction: column; gap: 4px; padding-right: 56px">
+<h2 id="drill-h" style="margin: 0; font-size: 21px; font-weight: 400">{{ d.title }} · {{ d.country }}</h2>
+<p style="margin: 0; color: #AEB4B0; font-size: 13.5px">{{ d.people }} people · gross annual, {{ d.cur }}</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 62px; font-weight: 300; letter-spacing: -0.03em; line-height: 1; color: #D4F36B">{{ d.median }}</span>
+<span style="color: #AEB4B0">median</span>
+</div>
+<dl style="margin: 0; display: flex; flex-wrap: wrap; gap: 24px">
+<sc-for list="{{ d.stats }}" as="st" hint-placeholder-count="4">
+<div style="display: flex; flex-direction: column-reverse; gap: 2px"><dt style="color: #AEB4B0; font-size: 13px">{{ st.k }}</dt><dd style="margin: 0; font-size: 21px; font-weight: 300">{{ st.v }}</dd></div>
+</sc-for>
+</dl>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div role="img" aria-label="{{ d.plotLabel }}" style="position: relative; height: 40px">
+<div style="position: absolute; top: 14px; left: 0; right: 0; height: 12px; border-radius: 999px; background: rgba(255,255,255,0.08)"></div>
+<div style="{{ d.whisker }}"></div>
+<div style="{{ d.box }}"></div>
+<div style="{{ d.tick }}"></div>
+<sc-for list="{{ d.dots }}" as="o" hint-placeholder-count="4">
+<div style="{{ o.dot }}"></div>
+</sc-for>
+</div>
+<div style="position: relative; height: 16px; font-size: 12.5px; color: #AEB4B0">
+<sc-for list="{{ d.grid }}" as="g" hint-placeholder-count="5">
+<span style="{{ g.label }}">{{ g.text }}</span>
+</sc-for>
+</div>
+</div>
+</section>
+<a href="Main.dc.html" aria-label="View these people" style="position: absolute; top: 0; right: 0; width: 48px; height: 48px; border-radius: 50%; background: #D4F36B; color: #2B2B2B; text-decoration: none; display: flex; align-items: center; justify-content: center; font-size: 20px">↗</a>
+</div>
+
+<div style="position: relative; flex: 2 1 340px; min-width: 0; display: flex">
+<section aria-labelledby="out-h" style="flex: 1; border-radius: 28px; background: #FFFFFF; padding: 22px; display: flex; flex-direction: column; gap: 12px; -webkit-mask: radial-gradient(circle 36px at calc(100% - 24px) 24px, transparent 35.5px, #000 36px); mask: radial-gradient(circle 36px at calc(100% - 24px) 24px, transparent 35.5px, #000 36px)">
+<div style="display: flex; align-items: baseline; gap: 12px; padding-right: 56px">
+<h3 id="out-h" style="margin: 0; font-size: 19px; font-weight: 400">Outliers</h3>
+<span style="font-size: 34px; font-weight: 300; letter-spacing: -0.02em">{{ d.outCount }}</span>
+</div>
+<p style="margin: 0; font-size: 13px; color: #6F7571; line-height: 1.5">Pay far outside the middle 50% (1.5 × IQR rule). A prompt to review, not a verdict.</p>
+<ul role="list" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px">
+<sc-for list="{{ d.outliers }}" as="p" hint-placeholder-count="5">
+<li style="display: flex; align-items: center; gap: 12px; padding: 8px 6px; border-bottom: 1px solid #F1F3F1">
+<span aria-hidden="true" style="{{ p.avatar }}">{{ p.initials }}</span>
+<a href="Main.dc.html" style="flex: 1; text-decoration: none">{{ p.name }}</a>
+<span style="font-size: 13.5px">{{ p.gross }}</span>
+<span style="{{ p.pill }}">{{ p.delta }}</span>
+</li>
+</sc-for>
+</ul>
+</section>
+<a href="Main.dc.html" aria-label="Open the Outliers view" style="position: absolute; top: 0; right: 0; width: 48px; height: 48px; border-radius: 50%; background: #2B2B2B; color: #FFFFFF; text-decoration: none; display: flex; align-items: center; justify-content: center; font-size: 20px">↗</a>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1640}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const st = this.state || {};
+    const si = st.i === undefined ? 3 : st.i;
+    const sj = st.j === undefined ? 0 : st.j;
+    const countries = [
+      ['IN', 'India', 'INR', 4120, 1700000], ['US', 'United States', 'USD', 2310, 135000], ['GB', 'United Kingdom', 'GBP', 1180, 62000],
+      ['DE', 'Germany', 'EUR', 960, 70000], ['CA', 'Canada', 'CAD', 820, 98000], ['SG', 'Singapore', 'SGD', 610, 92000]
+    ];
+    const roles = [
+      ['Engineering Manager', 'Engineering', 2.7, 0.034], ['Senior Software Engineer', 'Engineering', 1.82, 0.126],
+      ['Product Manager', 'Product', 1.65, 0.051], ['Software Engineer', 'Engineering', 1, 0.301],
+      ['HR Business Partner', 'People', 0.72, 0.036], ['Data Analyst', 'Data', 0.68, 0.092],
+      ['QA Engineer', 'Engineering', 0.54, 0.148], ['Sales Executive', 'Sales', 0.5, 0.212]
+    ];
+    const names = {
+      IN: ['Rohan Kapoor', 'Sneha Reddy', 'Vikram Singh', 'Meera Joshi', 'Karan Malhotra', 'Pooja Desai'],
+      US: ['Ethan Brooks', 'Olivia Chen', 'Mason Reed', 'Sophia Patel', 'Liam Carter', 'Grace Kim'],
+      GB: ['Oliver Hughes', 'Isla Morgan', 'Harry Evans', 'Freya Wilson', 'Jack Turner', 'Poppy Clarke'],
+      DE: ['Lukas Weber', 'Lena Fischer', 'Jonas Becker', 'Mia Wagner', 'Felix Hoffmann', 'Emma Koch'],
+      CA: ['Noah Tremblay', 'Chloe Martin', 'Liam Roy', 'Emma Gagnon', 'Lucas Côté', 'Ava Bouchard'],
+      SG: ['Wei Ling Tan', 'Jun Hao Lim', 'Priya Nair', 'Marcus Goh', 'Hui Min Ng', 'Daniel Teo']
+    };
+    const avatarBg = ['#D4F36B', '#A8E6C9', '#D6ECFF', '#F3E3C3', '#E2D9F7', '#D4F36B'];
+    const full = (n, cc) => Math.round(n).toLocaleString(cc === 'IN' ? 'en-IN' : 'en-US');
+    const compact = (n, cc) => cc === 'IN' ? (n / 100000).toFixed(1) + 'L' : Math.round(n / 1000) + 'k';
+    const stats = (i, j) => {
+      const [cc, , , total, base] = countries[j];
+      const [, , mult, share] = roles[i];
+      const m = base * mult;
+      const people = Math.round(total * share);
+      const out = Math.round(people * 0.012 * (1 + ((i + j) % 3) * 0.5));
+      const wLo = m * (0.58 + 0.03 * ((i * 2 + j) % 3));
+      const wHi = m * (1.42 + 0.03 * ((i + j) % 3));
+      const list = [];
+      for (let k = 0; k < Math.min(out, 6); k++) list.push(k % 3 === 2 ? m * (0.36 + 0.02 * (k % 2)) : m * (1.6 + 0.05 * k));
+      return { cc, m, people, out, wLo, wHi, p25: m * 0.86, p75: m * 1.14, min: Math.min(wLo, ...list), max: Math.max(wHi, ...list), list };
+    };
+    const colMax = countries.map((c, j) => Math.max(...roles.map((r, i) => stats(i, j).wHi)) * 1.06);
+    const pct = (v, top) => (v / top) * 100;
+    const cols = countries.map((c) => ({ name: c[1], cur: c[2] }));
+    const matrix = roles.map((r, i) => ({
+      title: r[0], dept: r[1],
+      cells: countries.map((c, j) => {
+        const s = stats(i, j), top = colMax[j];
+        const on = i === si && j === sj;
+        return {
+          median: compact(s.m, s.cc), people: s.people.toLocaleString('en-US'),
+          selected: on ? 'true' : 'false',
+          label: r[0] + ' in ' + c[1] + ': median ' + full(s.m, s.cc) + ' ' + c[2] + ', ' + s.people + ' people, ' + s.out + ' outliers',
+          style: 'min-height: 88px; padding: 12px 14px; border-radius: 18px; border: 1.5px solid ' + (on ? '#2B2B2B' : 'transparent') + '; font: inherit; color: #2B2B2B; text-align: left; display: flex; flex-direction: column; align-items: stretch; cursor: pointer; background: ' + (on ? '#F0F8DF' : '#F6F8F5'),
+          box: 'position: absolute; top: 0; height: 8px; border-radius: 999px; background: ' + (on ? '#A9D93A' : '#D4F36B') + '; left: ' + pct(s.p25, top) + '%; width: ' + (pct(s.p75, top) - pct(s.p25, top)) + '%',
+          tick: 'position: absolute; top: -3px; width: 2px; height: 14px; border-radius: 1px; background: #2B2B2B; left: ' + pct(s.m, top) + '%',
+          outText: s.out ? String(s.out) : '',
+          outStyle: s.out ? 'font-size: 12px; font-weight: 500; padding: 2px 8px; border-radius: 999px; background: #FFE2B8; color: #6B3800' : 'display: none',
+          pick: () => this.setState({ i, j })
+        };
+      })
+    }));
+    const s = stats(si, sj), c = countries[sj], r = roles[si];
+    const top = s.max * 1.08;
+    const grid = [0, 0.25, 0.5, 0.75, 1].map((f) => ({
+      label: 'position: absolute; top: 0; transform: translateX(' + (f === 1 ? '-100%' : f === 0 ? '0' : '-50%') + '); left: ' + f * 100 + '%',
+      text: compact(top * f, s.cc)
+    }));
+    const outliers = s.list.map((v, k) => {
+      const up = v > s.m;
+      const nm = names[s.cc][k];
+      return {
+        name: nm, gross: full(v, s.cc),
+        initials: nm.split(' ').map((w) => w[0]).join('').slice(0, 2),
+        avatar: 'width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12.5px; font-weight: 500; background: ' + avatarBg[k],
+        delta: (up ? '+' : '−') + Math.round(Math.abs(v - s.m) / s.m * 100) + '%',
+        pill: 'min-width: 56px; text-align: center; padding: 5px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 500; background: ' + (up ? '#D4F36B' : '#D6ECFF') + '; color: ' + (up ? '#2E4A06' : '#12406B')
+      };
+    });
+    const d = {
+      title: r[0], country: c[1], cur: c[2], people: s.people.toLocaleString('en-US'), outCount: s.out,
+      median: full(s.m, s.cc),
+      stats: [
+        { k: 'Minimum', v: full(s.min, s.cc) }, { k: '25th percentile', v: full(s.p25, s.cc) },
+        { k: '75th percentile', v: full(s.p75, s.cc) }, { k: 'Maximum', v: full(s.max, s.cc) }
+      ],
+      plotLabel: 'Box plot of gross salary in ' + c[2] + ': median ' + full(s.m, s.cc),
+      grid,
+      whisker: 'position: absolute; top: 19px; height: 2px; background: rgba(255,255,255,0.35); left: ' + pct(s.wLo, top) + '%; width: ' + (pct(s.wHi, top) - pct(s.wLo, top)) + '%',
+      box: 'position: absolute; top: 10px; height: 20px; border-radius: 999px; background: #D4F36B; left: ' + pct(s.p25, top) + '%; width: ' + (pct(s.p75, top) - pct(s.p25, top)) + '%',
+      tick: 'position: absolute; top: 4px; width: 3px; height: 32px; margin-left: -1px; border-radius: 2px; background: #FFFFFF; left: ' + pct(s.m, top) + '%',
+      dots: s.list.map((v) => ({ dot: 'position: absolute; top: 13px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; border: 2px solid #2B2B2B; box-sizing: border-box; background: ' + (v > s.m ? '#FFB86B' : '#9CCBFF') + '; left: ' + pct(v, top) + '%' })),
+      outliers
+    };
+    return { cols, matrix, d };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>People</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#D9E1DD}
+a{color:#2B2B2B}a:hover{color:#000000}
+</style>
+</helmet>
+<div style="min-height: 100vh; box-sizing: border-box; padding: 16px; background: #D9E1DD; font-family: 'Outfit', system-ui, sans-serif; color: #2B2B2B; font-size: 14.5px; font-variant-numeric: tabular-nums">
+<div style="max-width: 1400px; margin: 0 auto; box-sizing: border-box; border-radius: 40px; padding: 22px clamp(14px, 2.4vw, 28px) 28px; background: linear-gradient(115deg, #E9ECEA 0%, #EEF1EE 42%, #E8F5DD 78%, #DCF3C8 100%); display: flex; flex-direction: column; gap: 22px">
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<div style="display: flex; align-items: center; min-height: 52px; padding: 0 22px; border-radius: 999px; border: 1.5px solid #9DA39F; font-size: 26px; font-weight: 300; letter-spacing: -0.01em">acme pay</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px">
+<nav aria-label="Primary" style="display: flex; gap: 4px; padding: 5px; border-radius: 999px; background: rgba(255,255,255,0.72)">
+<a href="Main.dc.html" aria-current="page" style="min-height: 42px; display: flex; align-items: center; padding: 0 18px; border-radius: 999px; background: #2B2B2B; color: #FFFFFF; text-decoration: none">People</a>
+<a href="Insights.dc.html" style="min-height: 42px; display: flex; align-items: center; padding: 0 18px; border-radius: 999px; color: #2B2B2B; text-decoration: none">Pay bands</a>
+</nav>
+<button type="button" style="min-height: 52px; display: flex; align-items: center; gap: 8px; padding: 0 18px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.72); font: inherit; color: #2B2B2B">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>Search <span style="color: #6F7571; font-size: 12.5px">⌘K</span>
+</button>
+<span aria-label="Signed in as HR Manager" style="width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.72); display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2B2B" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1-4 4-6 8-6s7 2 8 6"></path></svg>
+</span>
+</div>
+</header>
+
+<h1 style="margin: 8px 0 0; font-size: clamp(40px, 5vw, 58px); font-weight: 300; letter-spacing: -0.02em; line-height: 1">People</h1>
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div role="img" aria-label="Headcount by country: India 41%, United States 23%, United Kingdom 12%, Germany 10%, Canada 8%, Singapore 6%" style="flex: 1 1 520px; min-width: 0; max-width: 780px; display: flex; gap: 6px">
+<div style="flex: 41 1 0; min-width: 52px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; color: #3F4440; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">India</span><span style="height: 46px; border-radius: 999px; background: #2B2B2B; color: #FFFFFF; display: flex; align-items: center; padding: 0 14px; font-size: 13px">41%</span></div>
+<div style="flex: 23 1 0; min-width: 52px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; color: #3F4440; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">United States</span><span style="height: 46px; border-radius: 999px; background: #D4F36B; display: flex; align-items: center; padding: 0 14px; font-size: 13px">23%</span></div>
+<div style="flex: 12 1 0; min-width: 52px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; color: #3F4440; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">UK</span><span style="height: 46px; border-radius: 999px; background: #A8E6C9; display: flex; align-items: center; padding: 0 12px; font-size: 13px">12%</span></div>
+<div style="flex: 10 1 0; min-width: 52px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; color: #3F4440; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Germany</span><span style="height: 46px; border-radius: 999px; background: repeating-linear-gradient(120deg, rgba(255,255,255,0.95) 0 2px, rgba(255,255,255,0.15) 2px 9px); display: flex; align-items: center; padding: 0 12px; font-size: 13px">10%</span></div>
+<div style="flex: 8 1 0; min-width: 52px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; color: #3F4440; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">Canada</span><span style="height: 46px; box-sizing: border-box; border-radius: 999px; border: 1.5px solid #2B2B2B; display: flex; align-items: center; justify-content: center; font-size: 13px">8%</span></div>
+<div style="flex: 6 1 0; min-width: 52px; display: flex; flex-direction: column; gap: 8px"><span style="font-size: 14px; color: #3F4440; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">SG</span><span style="height: 46px; box-sizing: border-box; border-radius: 999px; border: 1.5px dashed #2B2B2B; display: flex; align-items: center; justify-content: center; font-size: 13px">6%</span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<button type="button" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.75); font: inherit; color: #2B2B2B; display: flex; align-items: center; gap: 8px">All people <span aria-hidden="true">⌄</span></button>
+<button type="button" style="min-height: 46px; padding: 0 18px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.75); font: inherit; color: #2B2B2B; display: flex; align-items: center; gap: 8px">Group by <span aria-hidden="true">⌄</span></button>
+<a href="Insights.dc.html" style="min-height: 46px; padding: 0 18px; border-radius: 999px; background: rgba(255,255,255,0.75); text-decoration: none; display: flex; align-items: center; gap: 8px">Pay bands <span aria-hidden="true">↗</span></a>
+</div>
+</div>
+
+<section aria-label="Employees">
+<div style="display: flex; align-items: stretch">
+<div style="flex: 1 1 auto; min-width: 0; background: #F6F8F5; border-radius: 32px 32px 0 0; padding: 20px 20px 16px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+<button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 0; background: #FFFFFF; font: inherit; color: #2B2B2B">Columns ⌄</button>
+<button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 0; background: #FFFFFF; font: inherit; color: #2B2B2B">Country ⌄</button>
+<button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 0; background: #FFFFFF; font: inherit; color: #2B2B2B">Job title ⌄</button>
+<button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 0; background: #FFFFFF; font: inherit; color: #2B2B2B">Department ⌄</button>
+<button type="button" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 0; background: #FFFFFF; font: inherit; color: #2B2B2B">Pay position ⌄</button>
+<div style="flex: 1 1 220px; min-height: 44px; display: flex; align-items: center; gap: 10px; padding: 0 16px; border-radius: 999px; background: #FFFFFF">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2B2B2B" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+<label for="search" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Search employees</label>
+<input id="search" type="search" placeholder="Search" style="flex: 1; min-width: 0; border: 0; font: inherit; color: #2B2B2B; background: transparent">
+</div>
+</div>
+<div style="position: relative; flex: 0 0 auto; display: flex; align-items: center; gap: 8px; padding: 0 0 18px 18px">
+<div aria-hidden="true" style="position: absolute; left: 0; bottom: 0; width: 32px; height: 32px; background: radial-gradient(circle at 100% 0%, transparent 31.5px, #F6F8F5 32px)"></div>
+<button type="button" aria-label="Add employee" style="width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.8); font: inherit; font-size: 20px; color: #2B2B2B">+</button>
+<button type="button" aria-label="Advanced filters" style="width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2B2B2B" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h10"></path><path d="M18 7h2"></path><circle cx="16" cy="7" r="2"></circle><path d="M4 17h2"></path><path d="M10 17h10"></path><circle cx="8" cy="17" r="2"></circle></svg></button>
+<button type="button" style="min-height: 48px; padding: 0 18px; border-radius: 999px; border: 0; background: rgba(255,255,255,0.8); font: inherit; color: #2B2B2B; display: flex; align-items: center; gap: 8px"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"></path><path d="m8 8 4-4 4 4"></path><path d="M5 13v6h14v-6"></path></svg>Export</button>
+</div>
+</div>
+
+<div style="background: #F6F8F5; border-radius: 0 32px 32px 32px; padding: 0 16px 16px; display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+
+<div style="flex: 999 1 640px; min-width: 0; background: #FFFFFF; border-radius: 26px; padding: 10px 18px 14px">
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 860px; border-collapse: separate; border-spacing: 0 2px">
+<thead>
+<tr>
+<th scope="col" style="width: 40px; padding: 18px 8px 16px; border-bottom: 1.5px dotted #C6CBC7"><input type="checkbox" aria-label="Select all" style="width: 18px; height: 18px"></th>
+<th scope="col" style="text-align: left; padding: 18px 10px 16px; font-weight: 400; border-bottom: 1.5px dotted #C6CBC7">Name</th>
+<th scope="col" style="text-align: left; padding: 18px 10px 16px; font-weight: 400; border-bottom: 1.5px dotted #C6CBC7"><span aria-hidden="true" style="color: #8A908C; margin-right: 6px">⇅</span>Job title</th>
+<th scope="col" style="text-align: left; padding: 18px 10px 16px; font-weight: 400; border-bottom: 1.5px dotted #C6CBC7"><span aria-hidden="true" style="color: #8A908C; margin-right: 6px">⇅</span>Department</th>
+<th scope="col" style="text-align: left; padding: 18px 10px 16px; font-weight: 400; border-bottom: 1.5px dotted #C6CBC7"><span aria-hidden="true" style="color: #8A908C; margin-right: 6px">⇅</span>Country</th>
+<th scope="col" style="text-align: right; padding: 18px 10px 16px; font-weight: 400; border-bottom: 1.5px dotted #C6CBC7"><span aria-hidden="true" style="color: #8A908C; margin-right: 6px">⇅</span>Gross salary</th>
+<th scope="col" style="text-align: right; padding: 18px 10px 16px; font-weight: 400; border-bottom: 1.5px dotted #C6CBC7"><span aria-hidden="true" style="color: #8A908C; margin-right: 6px">⇅</span>Net salary</th>
+<th scope="col" style="text-align: right; padding: 18px 8px 16px 10px; font-weight: 400; border-bottom: 1.5px dotted #C6CBC7"><span aria-hidden="true" style="color: #8A908C; margin-right: 6px">⇅</span>vs median</th>
+</tr>
+</thead>
+<tbody>
+<sc-for list="{{ rows }}" as="r" hint-placeholder-count="10">
+<tr>
+<td style="{{ r.cellL }}"><input type="checkbox" aria-label="Select {{ r.name }}" style="width: 18px; height: 18px"></td>
+<td style="{{ r.cell }}">
+<button type="button" onClick="{{ r.select }}" style="display: flex; align-items: center; gap: 12px; border: 0; background: transparent; padding: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; min-height: 44px">
+<span aria-hidden="true" style="{{ r.avatar }}">{{ r.initials }}</span>
+<span style="font-weight: 500">{{ r.name }}</span>
+</button>
+</td>
+<td style="{{ r.cell }}">{{ r.title }}</td>
+<td style="{{ r.cell }}">{{ r.dept }}</td>
+<td style="{{ r.cell }}">{{ r.country }}</td>
+<td style="{{ r.cellNum }}"><span style="color: #6F7571; font-size: 12.5px">{{ r.cur }} </span>{{ r.gross }}</td>
+<td style="{{ r.cellNum }}">{{ r.net }}</td>
+<td style="{{ r.cellR }}"><span style="{{ r.pill }}">{{ r.deltaShort }}</span></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding: 12px 8px 0; color: #6F7571">
+<span>1–10 of 10,000</span>
+<div style="display: flex; gap: 6px">
+<button type="button" aria-label="Previous page" disabled style="width: 44px; height: 40px; border-radius: 999px; border: 1px solid #E4E8E5; background: transparent; color: #A9AEAA; font: inherit">←</button>
+<button type="button" aria-label="Next page" style="width: 44px; height: 40px; border-radius: 999px; border: 0; background: #2B2B2B; color: #FFFFFF; font: inherit">→</button>
+</div>
+</div>
+</div>
+
+<sc-if value="{{ open }}" hint-placeholder-val="{{ true }}">
+<div style="position: relative; flex: 1 1 340px; min-width: 0">
+<aside aria-label="Employee details" style="border-radius: 28px; background: #2B2B2B; color: #F3F5F3; padding: 24px; display: flex; flex-direction: column; gap: 20px; -webkit-mask: radial-gradient(circle 36px at calc(100% - 24px) 24px, transparent 35.5px, #000 36px); mask: radial-gradient(circle 36px at calc(100% - 24px) 24px, transparent 35.5px, #000 36px)">
+<div style="display: flex; align-items: center; gap: 14px; padding-right: 52px">
+<span aria-hidden="true" style="width: 52px; height: 52px; border-radius: 50%; background: #D4F36B; color: #2B2B2B; display: flex; align-items: center; justify-content: center; font-weight: 500; font-size: 17px; flex-shrink: 0">{{ s.initials }}</span>
+<div style="min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<h2 style="margin: 0; font-size: 20px; font-weight: 400">{{ s.name }}</h2>
+<p style="margin: 0; color: #AEB4B0; font-size: 13.5px">{{ s.title }} · {{ s.country }}</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; display: flex; align-items: baseline; gap: 10px"><span style="{{ s.bigNum }}">{{ s.deltaNum }}</span><span style="color: #AEB4B0">{{ s.deltaWord }}</span></p>
+<p style="margin: 0; color: #AEB4B0; font-size: 13.5px">Against {{ s.peers }} peers in the same role and country</p>
+<div aria-hidden="true" style="position: relative; height: 14px; border-radius: 999px; background: rgba(255,255,255,0.1); margin-top: 6px">
+<div style="{{ s.bigFill }}"></div>
+<div style="{{ s.bigTick }}"></div>
+<div style="{{ s.bigDot }}"></div>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 12.5px; color: #AEB4B0"><span>{{ s.min }}</span><span>median {{ s.median }}</span><span>{{ s.max }}</span></div>
+</div>
+<dl style="margin: 0; border-radius: 20px; background: rgba(255,255,255,0.06); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between"><dt style="color: #AEB4B0">Gross annual</dt><dd style="margin: 0">{{ s.cur }} {{ s.gross }}</dd></div>
+<div style="display: flex; justify-content: space-between"><dt style="color: #AEB4B0">{{ s.dedLabel }}</dt><dd style="margin: 0; color: #AEB4B0">{{ s.ded }}</dd></div>
+<div style="display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.12)"><dt>Net annual</dt><dd style="margin: 0; font-size: 21px; color: #D4F36B">{{ s.cur }} {{ s.net }}</dd></div>
+<div style="display: flex; justify-content: space-between; font-size: 13.5px"><dt style="color: #AEB4B0">Net monthly</dt><dd style="margin: 0; color: #AEB4B0">{{ s.monthly }}</dd></div>
+</dl>
+<div style="display: flex; gap: 10px">
+<button type="button" style="flex: 1; min-height: 50px; border-radius: 999px; border: 0; background: #D4F36B; color: #2B2B2B; font: inherit; font-weight: 500">Edit</button>
+<button type="button" style="min-height: 50px; padding: 0 22px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); background: transparent; color: #FFB4A8; font: inherit">Delete</button>
+<button type="button" onClick="{{ close }}" style="min-height: 50px; padding: 0 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); background: transparent; color: #F3F5F3; font: inherit">Close</button>
+</div>
+</aside>
+<button type="button" aria-label="Open full record" style="position: absolute; top: 0; right: 0; width: 48px; height: 48px; border-radius: 50%; border: 0; background: #D4F36B; color: #2B2B2B; font: inherit; font-size: 20px">↗</button>
+</div>
+</sc-if>
+
+</div>
+</section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1180}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const st = this.state || {};
+    const sel = st.sel === undefined ? 0 : st.sel;
+    const base = { IN: 1700000, US: 135000, GB: 62000, DE: 70000, CA: 98000, SG: 92000 };
+    const meta = {
+      IN: ['India', 'INR', 4120, 0.10, 'TDS (10%)'], US: ['United States', 'USD', 2310, 0.12, 'Withholding (12%)'],
+      GB: ['United Kingdom', 'GBP', 1180, 0, 'No deduction rule'], DE: ['Germany', 'EUR', 960, 0, 'No deduction rule'],
+      CA: ['Canada', 'CAD', 820, 0, 'No deduction rule'], SG: ['Singapore', 'SGD', 610, 0, 'No deduction rule']
+    };
+    const roles = {
+      'Engineering Manager': [2.7, 0.034, 'Engineering'], 'Senior Software Engineer': [1.82, 0.126, 'Engineering'],
+      'Product Manager': [1.65, 0.051, 'Product'], 'Software Engineer': [1, 0.301, 'Engineering'],
+      'HR Business Partner': [0.72, 0.036, 'People'], 'Data Analyst': [0.68, 0.092, 'Data'],
+      'QA Engineer': [0.54, 0.148, 'Engineering'], 'Sales Executive': [0.5, 0.212, 'Sales']
+    };
+    const avatarBg = ['#D4F36B', '#A8E6C9', '#D6ECFF', '#F3E3C3', '#E2D9F7'];
+    const fmt = (n, cc) => Math.round(n).toLocaleString(cc === 'IN' ? 'en-IN' : 'en-US');
+    const people = [
+      ['Aarav Mehta', 'Software Engineer', 'IN', 1840000, '15 Mar 2021'],
+      ['Abigail Turner', 'Product Manager', 'US', 214000, '02 Aug 2019'],
+      ['Adebayo Okafor', 'Data Analyst', 'GB', 42500, '11 Jan 2023'],
+      ['Aiko Tanaka', 'Senior Software Engineer', 'SG', 192000, '27 Jun 2018'],
+      ['Alejandro Ruiz', 'Sales Executive', 'CA', 43600, '09 Sep 2024'],
+      ['Amelia Schmidt', 'HR Business Partner', 'DE', 51000, '18 Apr 2022'],
+      ['Ananya Iyer', 'QA Engineer', 'IN', 960000, '03 Feb 2025'],
+      ['Arjun Nair', 'Engineering Manager', 'IN', 4200000, '21 Nov 2016'],
+      ['Ava Johnson', 'Data Analyst', 'US', 92000, '14 May 2024'],
+      ['Ayesha Khan', 'QA Engineer', 'GB', 30500, '30 Oct 2020']
+    ];
+    const rows = people.map((p, i) => {
+      const [name, title, cc, v, hire] = p;
+      const [country, cur, total, rate, dedLabel] = meta[cc];
+      const [mult, share, dept] = roles[title];
+      const m = base[cc] * mult, lo = m * 0.55, hi = m * 1.8;
+      const pos = Math.max(4, Math.min(96, ((v - lo) / (hi - lo)) * 100));
+      const medPos = ((m - lo) / (hi - lo)) * 100;
+      const d = (v - m) / m;
+      const dir = Math.abs(d) < 0.02 ? 'flat' : d > 0 ? 'up' : 'down';
+      const pct = Math.round(Math.abs(d) * 100) + '%';
+      const net = v * (1 - rate);
+      const on = i === sel;
+      const bg = on ? '#F0F8DF' : 'transparent';
+      const cellBase = 'padding: 8px 10px; border-bottom: 1px solid #F1F3F1; background: ' + bg + ';';
+      const pillBg = dir === 'up' ? '#D4F36B' : dir === 'down' ? '#D6ECFF' : '#EEF1EE';
+      const pillFg = dir === 'up' ? '#2E4A06' : dir === 'down' ? '#12406B' : '#3F4440';
+      return {
+        name, title, dept, country, cc, cur, hire,
+        initials: name.split(' ').map((w) => w[0]).join(''),
+        gross: fmt(v, cc), net: fmt(net, cc), monthly: fmt(net / 12, cc),
+        ded: rate ? '− ' + fmt(v * rate, cc) : '0', dedLabel,
+        min: fmt(lo, cc), median: fmt(m, cc), max: fmt(hi, cc),
+        peers: fmt(total * share, 'US'),
+        deltaShort: dir === 'flat' ? 'At median' : (dir === 'up' ? '+' : '−') + pct,
+        deltaNum: dir === 'flat' ? '0%' : (dir === 'up' ? '+' : '−') + pct,
+        deltaWord: dir === 'flat' ? 'at the median' : dir === 'up' ? 'above median' : 'below median',
+        bigNum: 'font-size: 60px; font-weight: 300; letter-spacing: -0.03em; line-height: 1; color: ' + (dir === 'up' ? '#D4F36B' : dir === 'down' ? '#9CCBFF' : '#F3F5F3'),
+        pill: 'display: inline-block; min-width: 72px; text-align: center; padding: 7px 12px; border-radius: 999px; font-size: 13px; font-weight: 500; background: ' + pillBg + '; color: ' + pillFg,
+        avatar: 'width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; color: #2B2B2B; background: ' + avatarBg[i % 5],
+        cellL: cellBase + ' padding-left: 8px; border-radius: 14px 0 0 14px; text-align: center',
+        cell: cellBase + ' color: #2B2B2B',
+        cellNum: cellBase + ' text-align: right; white-space: nowrap',
+        cellR: cellBase + ' text-align: right; padding-right: 8px; border-radius: 0 14px 14px 0',
+        bigFill: 'position: absolute; left: 0; top: 0; height: 14px; border-radius: 999px; width: ' + pos + '%; background: ' + (dir === 'down' ? '#9CCBFF' : '#D4F36B'),
+        bigTick: 'position: absolute; top: -5px; left: ' + medPos + '%; width: 2px; height: 24px; margin-left: -1px; background: #FFFFFF',
+        bigDot: 'position: absolute; top: -4px; left: ' + pos + '%; width: 22px; height: 22px; margin-left: -11px; border-radius: 50%; border: 4px solid #2B2B2B; box-sizing: border-box; background: #FFFFFF',
+        select: () => this.setState({ sel: i })
+      };
+    });
+    return { rows, open: sel !== null, s: sel !== null ? rows[sel] : rows[0], close: () => this.setState({ sel: null }) };
+  }
+}
+</script>
+</body>
+</html>
