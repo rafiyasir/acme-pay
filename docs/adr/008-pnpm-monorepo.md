@@ -7,9 +7,9 @@
 The app has an API and a web client. Reviewers need one link, and validation schemas can be shared.
 
 ## Decision
-One repository with pnpm workspaces: `api/` and `web/`. Each is deployed on its own host, using the host's root directory setting (ADR-009).
+One repository with pnpm workspaces: `api/` and `web/`. Each is deployed on its own host (ADR-009).
 
 ## Consequences
 - One clone, one README, one commit history for the reviewer.
-- Two deploy targets from one repo. A separate repo per app was rejected: it splits the history the assessment asks to see and gains nothing, because both hosts support a root directory.
+- Two deploy targets from one repo. A separate repo per app was rejected: it splits the history the assessment asks to see and gains nothing, because both hosts can build one folder of a monorepo.
 - pnpm keeps dependencies strict (undeclared imports fail early) and installs fast.

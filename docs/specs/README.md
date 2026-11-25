@@ -6,7 +6,7 @@ Backend first: specs 00 to 07b finish the API (deployed, with Swagger), then 08 
 
 | # | Spec | Area | Status |
 |---|---|---|---|
-| 00 | API setup and deployed walking skeleton | setup | draft |
+| 00 | API setup and deployed walking skeleton | setup | approved |
 | 01 | Money and Employee domain | domain | todo |
 | 02 | Create and get employee (persistence) | api | todo |
 | 03 | Seed 10,000 employees | data | todo |

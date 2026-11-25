@@ -1,6 +1,6 @@
 # Spec 00: API setup and deployed walking skeleton
 
-- Status: draft
+- Status: approved
 - Branch: chore/00-setup
 
 ## Goal
@@ -22,7 +22,7 @@ In:
 - `GET /api/health` returns `{ status: "ok", db: "ok" }` (or `db: "down"` with 503)
 - OpenAPI generated from Zod, Swagger UI at `/api/docs`
 - GitHub Actions: install, lint, unit tests on every push and PR
-- Deploy the API to Render (Singapore region, root directory `api/`); Neon `main` branch for production (ADR-009)
+- Deploy the API to Render (Singapore region). Render builds from the repo root so it finds the pnpm workspace and lockfile, using `pnpm --filter api` commands for build and start; Neon `main` branch for production (ADR-009)
 - CORS allows only the origin in `WEB_ORIGIN` (no wildcard)
 - `.env.example` documenting every variable
 
@@ -37,6 +37,7 @@ Out: any employee feature, any web code and the Vercel deploy (spec 08).
 - [ ] health returns 200 with db ok when the database responds
 - [ ] health returns 503 with db down when the database check fails (fake)
 - [ ] unknown route returns 404 in the standard error shape
+- [ ] an unexpected error returns 500 INTERNAL_ERROR in the standard error shape, without a stack trace
 - [ ] invalid environment config fails at startup with a clear message
 - [ ] CORS allows the configured web origin and no other
 
