@@ -52,7 +52,7 @@ Out: any employee feature, any web code and the Vercel deploy (spec 08).
   - `.env.example`: every variable name with a placeholder. The only committed one.
   - Production has no local file: the variables are set in the Render dashboard, so `seed:reset` cannot hit production by accident. Seed production once with a one-off command.
   - Pick one way to load the files (Node `--env-file` or `dotenv`) and make sure Vitest loads `.env.test` too.
-  - Neon: use the pooled connection string for the running API and the direct one for migrations; both need `sslmode=require`. Run `pnpm migrate` separately for each branch.
+  - Neon: use the direct connection string for every branch, with `sslmode=require`. The API is one long-running server with a small pool, so pooling adds little. Switch the deployed `DATABASE_URL` to the pooled string only if connection limits become a problem. Run `pnpm migrate` separately for each branch.
 
 ## Manual test
 1. `pnpm dev`, call `GET /api/health`: it returns `{ "status": "ok", "db": "ok" }`.
