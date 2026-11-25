@@ -8,7 +8,7 @@
     "start": "node dist/server.js",
     "test": "vitest run --project unit",
     "test:integration": "node scripts/require-test-db.mjs && vitest run --project integration",
-    "migrate": "typeorm-ts-node-esm migration:run -d src/infrastructure/data-source.ts"
+    "migrate": "tsx --env-file=.env.development node_modules/typeorm/cli.js migration:run -d src/infrastructure/migrate-data-source.ts"
   },
   "dependencies": {
     "@asteasolutions/zod-to-openapi": "^9.1.0",
