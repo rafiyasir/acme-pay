@@ -9,6 +9,9 @@ What the HR manager (or the developer) can do after this spec, in one or two sen
 ## Depends on
 Previous specs this builds on.
 
+## Read first
+The only files to read before starting: business-rule IDs, ADRs, and for UI specs `docs/design/design-system.md` plus the named mockup. `CLAUDE.md`, requirements and business rules load automatically.
+
 ## Scope
 In:
 Out:

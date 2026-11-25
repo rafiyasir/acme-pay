@@ -10,6 +10,10 @@ Backend comes first (specs 00 to 07b); the web app starts in spec 08. Every late
 ## Depends on
 Nothing.
 
+## Read first
+- `docs/architecture.md` (layers and environments)
+- ADR-001 (Neon), ADR-002 (layers), ADR-009 (Render and Vercel split)
+
 ## Scope
 In:
 - pnpm workspace with `api/` (the `web/` package is added in spec 08); TypeScript strict; ESLint + Prettier; Vitest

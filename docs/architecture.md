@@ -21,6 +21,7 @@ Express app ──► http (routes, Zod, errors, OpenAPI)
                                                     Neon Postgres
 ```
 
+The web stack is in ADR-010.
 The web app and the API are deployed separately (ADR-009): web on Vercel, API on Render. The API allows only the web origin through CORS.
 Build order: the API is built and deployed first (specs 00 to 07b); the web app and its Vercel deploy arrive in spec 08.
 

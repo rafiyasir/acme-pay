@@ -122,6 +122,7 @@ Stretch goal. Build only if time remains.
 - Wide tables scroll horizontally inside their card, never the page.
 
 ## Implementation in our stack
+The stack is decided in `docs/adr/010-web-stack.md`.
 - Tokens live as CSS variables in `web/src/styles/tokens.css` and are mapped into the Tailwind theme,
   so shadcn/ui components use them.
 - Shared components live in `web/src/components/ui/` (shadcn) and `web/src/components/` (ours).

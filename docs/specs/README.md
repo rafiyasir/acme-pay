@@ -1,26 +1,27 @@
 # Specs
 
 One spec per slice of work. Written (and reviewed by me) before implementation.
+Status is `todo` (no spec file yet), `draft`, `approved` or `done`. Update it when a spec changes state, so a new session knows where the project stands.
 Backend first: specs 00 to 07b finish the API (deployed, with Swagger), then 08 to 11 build the web app on it.
 
-| # | Spec | Area |
-|---|---|---|
-| 00 | API setup and deployed walking skeleton | setup |
-| 01 | Money and Employee domain | domain |
-| 02 | Create and get employee (persistence) | api |
-| 03 | Seed 10,000 employees | data |
-| 04 | List employees: search, filters, sort, pagination | api |
-| 05 | Update and delete employee | api |
-| 06 | Gross to net | domain, api |
-| 07 | Pay band statistics | api, sql |
-| 07b | CSV export of the filtered employee list (streamed, same filters as spec 04) | api |
-| 08 | Frontend shell, design tokens, health check page, Vercel deploy | web |
-| 09 | People screen | web |
-| 10 | Employee detail card and forms | web |
-| 11 | Pay bands screen | web |
-| 12 | Polish and README | docs |
+| # | Spec | Area | Status |
+|---|---|---|---|
+| 00 | API setup and deployed walking skeleton | setup | draft |
+| 01 | Money and Employee domain | domain | todo |
+| 02 | Create and get employee (persistence) | api | todo |
+| 03 | Seed 10,000 employees | data | todo |
+| 04 | List employees: search, filters, sort, pagination | api | todo |
+| 05 | Update and delete employee | api | todo |
+| 06 | Gross to net | domain, api | todo |
+| 07 | Pay band statistics | api, sql | todo |
+| 07b | CSV export of the filtered employee list (streamed, same filters as spec 04) | api | todo |
+| 08 | Frontend shell, design tokens, health check page, Vercel deploy | web | todo |
+| 09 | People screen | web | todo |
+| 10 | Employee detail card and forms | web | todo |
+| 11 | Pay bands screen | web | todo |
+| 12 | Polish and README | docs | todo |
 
-Nice to have (after 12): saved views.
+Every spec lists a "Read first" set of files. Nice to have (after 12): saved views.
 
 ## What the design needs from the specs
 
