@@ -1,6 +1,7 @@
 import express from 'express';
-import { errorHandler } from './middleware/error-handler.js';
 import type { DatabaseHealth } from '../application/ports/database-health.js';
+import { errorHandler } from './middleware/error-handler.js';
+import { notFound } from './middleware/not-found.js';
 
 export interface AppDependencies {
   databaseHealth: DatabaseHealth;
@@ -19,10 +20,7 @@ export function createApp({ databaseHealth }: AppDependencies) {
     res.json({ status: 'ok', db: 'ok' });
   });
 
-  app.use((_req, res) => {
-    res.status(404).json({ error: { code: 'NOT_FOUND', message: 'Route not found', details: [] } });
-  });
-
+  app.use(notFound);
   app.use(errorHandler);
 
   return app;
