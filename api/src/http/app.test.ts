@@ -27,3 +27,16 @@ describe('GET /api/health', () => {
     expect(response.body).toEqual({ status: 'degraded', db: 'down' });
   });
 });
+
+describe('unknown routes', () => {
+  it('returns 404 in the standard error shape', async () => {
+    const app = createApp({ databaseHealth: healthyDatabase, webOrigin });
+
+    const response = await request(app).get('/api/does-not-exist');
+
+    expect(response.status).toBe(404);
+    expect(response.body).toEqual({
+      error: { code: 'NOT_FOUND', message: 'Route not found', details: [] },
+    });
+  });
+});
