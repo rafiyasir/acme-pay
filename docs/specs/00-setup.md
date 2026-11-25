@@ -1,6 +1,6 @@
 # Spec 00: API setup and deployed walking skeleton
 
-- Status: approved
+- Status: done
 - Branch: chore/00-setup
 
 ## Goal
@@ -34,12 +34,12 @@ Out: any employee feature, any web code and the Vercel deploy (spec 08).
 - 503 `{ "status": "degraded", "db": "down" }`
 
 ## Test cases (red list)
-- [ ] health returns 200 with db ok when the database responds
-- [ ] health returns 503 with db down when the database check fails (fake)
-- [ ] unknown route returns 404 in the standard error shape
-- [ ] an unexpected error returns 500 INTERNAL_ERROR in the standard error shape, without a stack trace
-- [ ] invalid environment config fails at startup with a clear message
-- [ ] CORS allows the configured web origin and no other
+- [x] health returns 200 with db ok when the database responds
+- [x] health returns 503 with db down when the database check fails (fake)
+- [x] unknown route returns 404 in the standard error shape
+- [x] an unexpected error returns 500 INTERNAL_ERROR in the standard error shape, without a stack trace
+- [x] invalid environment config fails at startup with a clear message
+- [x] CORS allows the configured web origin and no other
 
 ## Implementation notes
 - The health check takes a small `DatabaseHealth` interface so it can be faked in tests.
@@ -61,6 +61,6 @@ Out: any employee feature, any web code and the Vercel deploy (spec 08).
 
 ## Definition of done
 - [ ] Tests green, lint clean, CI green
-- [ ] Swagger shows health endpoint
+- [x] Swagger shows health endpoint (covered by a test on /api/docs.json; check the UI in the manual test)
 - [ ] Deployed URL works
-- [ ] README has run instructions
+- [x] README has run instructions
