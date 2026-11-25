@@ -9,4 +9,13 @@ describe('loadConfig', () => {
       /Invalid environment:[\s\S]*DATABASE_URL[\s\S]*WEB_ORIGIN[\s\S]*PORT/,
     );
   });
+
+  it('rejects a web origin with a trailing slash, which would never match the browser origin', () => {
+    const env = {
+      DATABASE_URL: 'postgresql://user:pass@host/db',
+      WEB_ORIGIN: 'https://acme-pay.vercel.app/',
+    };
+
+    expect(() => loadConfig(env)).toThrowError(/WEB_ORIGIN/);
+  });
 });
