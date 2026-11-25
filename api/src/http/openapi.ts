@@ -7,8 +7,12 @@ import { z } from 'zod';
 
 extendZodWithOpenApi(z);
 
-const healthOk = z.object({ status: z.literal('ok'), db: z.literal('ok') });
-const healthDegraded = z.object({ status: z.literal('degraded'), db: z.literal('down') });
+export const healthOk = z.object({ status: z.literal('ok'), db: z.literal('ok') });
+export const healthDegraded = z.object({ status: z.literal('degraded'), db: z.literal('down') });
+
+// The route and the docs share these types, so a change to one fails to compile until the other follows.
+export type HealthOk = z.infer<typeof healthOk>;
+export type HealthDegraded = z.infer<typeof healthDegraded>;
 
 const registry = new OpenAPIRegistry();
 

@@ -4,7 +4,7 @@ import swaggerUi from 'swagger-ui-express';
 import type { DatabaseHealth } from '../application/ports/database-health.js';
 import { errorHandler } from './middleware/error-handler.js';
 import { notFound } from './middleware/not-found.js';
-import { buildOpenApiDocument } from './openapi.js';
+import { buildOpenApiDocument, type HealthDegraded, type HealthOk } from './openapi.js';
 
 export interface AppDependencies {
   databaseHealth: DatabaseHealth;
@@ -26,10 +26,12 @@ export function createApp({ databaseHealth, webOrigin }: AppDependencies) {
   app.get('/api/health', async (_req, res) => {
     const dbIsUp = await databaseHealth.isUp();
     if (!dbIsUp) {
-      res.status(503).json({ status: 'degraded', db: 'down' });
+      const body: HealthDegraded = { status: 'degraded', db: 'down' };
+      res.status(503).json(body);
       return;
     }
-    res.json({ status: 'ok', db: 'ok' });
+    const body: HealthOk = { status: 'ok', db: 'ok' };
+    res.json(body);
   });
 
   app.use(notFound);
