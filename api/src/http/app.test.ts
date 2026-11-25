@@ -71,3 +71,15 @@ describe('CORS', () => {
     expect(other.headers['access-control-allow-origin']).toBeUndefined();
   });
 });
+
+describe('OpenAPI docs', () => {
+  it('lists the health endpoint in the generated document', async () => {
+    const app = createApp({ databaseHealth: healthyDatabase, webOrigin });
+
+    const response = await request(app).get('/api/docs.json');
+
+    expect(response.status).toBe(200);
+    expect(response.body.openapi).toMatch(/^3\./);
+    expect(response.body.paths['/api/health'].get).toBeDefined();
+  });
+});
