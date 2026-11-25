@@ -6,6 +6,7 @@ import { createApp } from './app.js';
 const webOrigin = 'http://localhost:5173';
 
 const healthyDatabase: DatabaseHealth = { isUp: async () => true };
+const brokenDatabase: DatabaseHealth = { isUp: async () => false };
 
 describe('GET /api/health', () => {
   it('returns 200 with db ok when the database responds', async () => {
@@ -15,5 +16,14 @@ describe('GET /api/health', () => {
 
     expect(response.status).toBe(200);
     expect(response.body).toEqual({ status: 'ok', db: 'ok' });
+  });
+
+  it('returns 503 with db down when the database check fails', async () => {
+    const app = createApp({ databaseHealth: brokenDatabase, webOrigin });
+
+    const response = await request(app).get('/api/health');
+
+    expect(response.status).toBe(503);
+    expect(response.body).toEqual({ status: 'degraded', db: 'down' });
   });
 });
