@@ -20,3 +20,13 @@ reduced to 5, outliers promoted to must-have, backend-first build order).
 | Boilerplate, test scaffolding, Zod/OpenAPI wiring | Requirements, scope, business rules |
 | First drafts of specs and ADRs | Architecture and trade-off decisions |
 | Seed data generation | Reviewing every diff before commit |
+
+## Spec 00 notes
+
+- Claude chose `cors({ origin: [webOrigin] })` over a plain string after the CORS test failed: a string sends the allowed origin on every response, the array only on a match.
+- A failed green step was committed by mistake (the shell chain did not stop on a failing test). The unpushed commit was amended once the test passed, and later steps stop on failure before committing.
+- Claude dropped the planned `CheckHealth` use case: it only forwarded one call, so the route uses the `DatabaseHealth` port directly.
+- Added one test beyond the red list (OpenAPI lists `/api/health`) so the Swagger checkbox is backed by a test.
+- typescript-eslint did not support TypeScript 7, so TypeScript is pinned to 6.
+- `/review` caught two problems the tests could not: Render sets `NODE_ENV=production`, which would skip TypeScript during the build (fixed with `--prod=false`), and a trailing slash in `WEB_ORIGIN` would silently break CORS (now rejected at startup, with a test). A third finding was that `pnpm migrate` could not run without `.env.development`.
+- Spec 00 stays `approved` until CI is green and the Render deploy is checked, then it is marked `done`.
